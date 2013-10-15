@@ -155,7 +155,7 @@ public class prioridad implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.prioridad[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.prioridad[ id=" + id + " ]";
     }
     
 }

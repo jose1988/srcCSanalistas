@@ -373,7 +373,7 @@ public class tarea implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.tarea[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.tarea[ id=" + id + " ]";
     }
     
 }

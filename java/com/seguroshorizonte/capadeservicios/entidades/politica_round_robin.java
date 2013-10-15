@@ -128,7 +128,7 @@ public class politica_round_robin implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.politica_round_robin[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.politica_round_robin[ id=" + id + " ]";
     }
     
 }

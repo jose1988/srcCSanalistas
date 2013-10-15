@@ -194,7 +194,7 @@ public class documento implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.documento[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.documento[ id=" + id + " ]";
     }
     
 }

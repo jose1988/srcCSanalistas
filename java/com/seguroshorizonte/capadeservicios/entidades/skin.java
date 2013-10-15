@@ -121,7 +121,7 @@ public class skin implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.skin[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.skin[ id=" + id + " ]";
     }
     
 }

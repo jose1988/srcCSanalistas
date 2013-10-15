@@ -179,7 +179,7 @@ public class sesion implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.sesion[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.sesion[ id=" + id + " ]";
     }
     
 }

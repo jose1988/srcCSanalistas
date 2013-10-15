@@ -67,9 +67,7 @@ import javax.xml.ws.WebServiceRef;
 public class GestionDeActividades {
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_15362/Gestordepoliticas/AplicarPolitica.wsdl")
     private AplicarPolitica_Service service;
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_15362/Gestordepoliticas/AplicarPolitica.wsdl")
-    private AplicarPolitica_Service service_1;
-
+  
     /**
      * Declaracion del objeto validador y los facade necesarios. El validador
      * declarado debera verificar que fueron introducidos los parametros

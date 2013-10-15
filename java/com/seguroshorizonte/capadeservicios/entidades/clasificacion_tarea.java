@@ -163,7 +163,7 @@ public class clasificacion_tarea implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.clasificacion_tarea[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.clasificacion_tarea[ id=" + id + " ]";
     }
     
 }

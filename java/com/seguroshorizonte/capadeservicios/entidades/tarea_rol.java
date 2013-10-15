@@ -114,7 +114,7 @@ public class tarea_rol implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.tarea_rol[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.tarea_rol[ id=" + id + " ]";
     }
     
 }

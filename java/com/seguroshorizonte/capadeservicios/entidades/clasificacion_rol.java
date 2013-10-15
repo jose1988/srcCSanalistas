@@ -163,7 +163,7 @@ public class clasificacion_rol implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.clasificacion_rol[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.clasificacion_rol[ id=" + id + " ]";
     }
     
 }

@@ -199,7 +199,7 @@ public class horario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.horario[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.horario[ id=" + id + " ]";
     }
     
 }

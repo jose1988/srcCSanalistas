@@ -189,7 +189,7 @@ public class politica implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.politica[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.politica[ id=" + id + " ]";
     }
     
 }

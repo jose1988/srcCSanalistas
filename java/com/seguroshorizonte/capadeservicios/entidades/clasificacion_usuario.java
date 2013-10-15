@@ -163,7 +163,7 @@ public class clasificacion_usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.clasificacion_usuario[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.clasificacion_usuario[ id=" + id + " ]";
     }
     
 }

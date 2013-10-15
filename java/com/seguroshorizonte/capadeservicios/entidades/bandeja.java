@@ -120,7 +120,7 @@ public class bandeja implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.bandeja[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.bandeja[ id=" + id + " ]";
     }
     
 }

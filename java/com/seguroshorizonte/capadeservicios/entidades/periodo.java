@@ -169,7 +169,7 @@ public class periodo implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.periodo[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.periodo[ id=" + id + " ]";
     }
     
 }

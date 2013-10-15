@@ -211,7 +211,7 @@ public class destinatario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.destinatario[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.destinatario[ id=" + id + " ]";
     }
     
 }

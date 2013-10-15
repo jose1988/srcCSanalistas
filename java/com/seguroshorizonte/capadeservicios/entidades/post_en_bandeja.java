@@ -125,7 +125,7 @@ public class post_en_bandeja implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.post_en_bandeja[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.post_en_bandeja[ id=" + id + " ]";
     }
     
 }

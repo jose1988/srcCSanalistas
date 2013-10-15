@@ -205,7 +205,7 @@ public class transicion implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.transicion[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.transicion[ id=" + id + " ]";
     }
     
 }

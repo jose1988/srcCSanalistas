@@ -126,7 +126,7 @@ public class cola_de_tarea implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.cola_de_tarea[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.cola_de_tarea[ id=" + id + " ]";
     }
     
 }

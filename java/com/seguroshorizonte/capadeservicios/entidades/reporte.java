@@ -151,7 +151,7 @@ public class reporte implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.reporte[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.reporte[ id=" + id + " ]";
     }
     
 }

@@ -168,7 +168,7 @@ public class post implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.post[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.post[ id=" + id + " ]";
     }
     
 }

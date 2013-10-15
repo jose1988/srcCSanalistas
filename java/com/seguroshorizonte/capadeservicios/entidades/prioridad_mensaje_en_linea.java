@@ -151,7 +151,7 @@ public class prioridad_mensaje_en_linea implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.prioridad_mensaje_en_linea[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.prioridad_mensaje_en_linea[ id=" + id + " ]";
     }
     
 }

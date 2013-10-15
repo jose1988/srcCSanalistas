@@ -114,6 +114,6 @@ public class horario_usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.horario_usuario[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.horario_usuario[ id=" + id + " ]";
     }
 }

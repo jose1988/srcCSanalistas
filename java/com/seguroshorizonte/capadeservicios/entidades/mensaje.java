@@ -149,7 +149,7 @@ public class mensaje implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.mensaje[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.mensaje[ id=" + id + " ]";
     }
     
 }

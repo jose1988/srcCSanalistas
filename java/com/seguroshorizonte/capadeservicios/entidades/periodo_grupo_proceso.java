@@ -140,7 +140,7 @@ public class periodo_grupo_proceso implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.periodo_grupo_proceso[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.periodo_grupo_proceso[ id=" + id + " ]";
     }
     
 }

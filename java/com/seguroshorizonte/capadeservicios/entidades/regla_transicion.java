@@ -163,7 +163,7 @@ public class regla_transicion implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.regla_transicion[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.regla_transicion[ id=" + id + " ]";
     }
     
 }

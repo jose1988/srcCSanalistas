@@ -317,7 +317,7 @@ public class actividad implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.actividad[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.actividad[ id=" + id + " ]";
     }
     
 }

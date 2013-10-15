@@ -261,7 +261,7 @@ public class grupo implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.grupo[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.grupo[ id=" + id + " ]";
     }
     
 }

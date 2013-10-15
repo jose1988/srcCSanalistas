@@ -313,7 +313,7 @@ public class proceso implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.proceso[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.proceso[ id=" + id + " ]";
     }
     
 }

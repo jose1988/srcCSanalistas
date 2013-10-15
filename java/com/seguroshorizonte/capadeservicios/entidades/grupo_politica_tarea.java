@@ -125,7 +125,7 @@ public class grupo_politica_tarea implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.grupo_politica_tarea[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.grupo_politica_tarea[ id=" + id + " ]";
     }
     
 }

@@ -141,6 +141,6 @@ public class usuario_grupo_rol implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.usuario_grupo_rol[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.usuario_grupo_rol[ id=" + id + " ]";
     }
 }

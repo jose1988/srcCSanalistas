@@ -143,7 +143,7 @@ public class contador_round_robin implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.contador_round_robin[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.contador_round_robin[ id=" + id + " ]";
     }
     
 }

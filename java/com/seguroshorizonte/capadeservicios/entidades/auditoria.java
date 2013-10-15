@@ -144,7 +144,7 @@ public class auditoria implements Serializable {
 
     @Override
     public String toString() {
-        return "com.pangea.capadeservicios.entidades.auditoria[ id=" + id + " ]";
+        return "com.seguroshorizonte.capadeservicios.entidades.auditoria[ id=" + id + " ]";
     }
     
 }
