@@ -497,7 +497,7 @@ public class GestionDeActividades {
                 Resultado.setObservacion("Sesion no encontrada");
                 return Resultado;
             }
-            if(sesionActual.getEstado().compareTo("abierta")!=0){
+            if(sesionActual.getEstado().compareTo("Abierta")!=0){
                 Resultado.setEstatus("FAIL");
                 Resultado.setObservacion("Sesion invalida");
                 return Resultado;
