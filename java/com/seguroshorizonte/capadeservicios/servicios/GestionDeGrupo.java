@@ -10,6 +10,9 @@ import com.seguroshorizonte.capadeservicios.entidades.grupo;
 import com.seguroshorizonte.capadeservicios.entidades.rol;
 import com.seguroshorizonte.capadeservicios.entidades.usuario;
 import com.seguroshorizonte.capadeservicios.entidades.usuario_grupo_rol;
+import com.seguroshorizonte.capadeservicios.envoltorios.WR_rol;
+import com.seguroshorizonte.capadeservicios.envoltorios.WR_usuario_grupo_rol;
+import com.seguroshorizonte.capadeservicios.validadores.GestionDeGrupoValidador;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -31,6 +34,7 @@ public class GestionDeGrupo {
     grupoFacade grupoFacade;
     @EJB
     usuario_grupo_rolFacade ugrFacade;
+    GestionDeGrupoValidador myValidador = new GestionDeGrupoValidador();
 
     /**
      * This is a sample web service operation
@@ -101,12 +105,30 @@ public class GestionDeGrupo {
      * @param idGrupo objeto de la clase Grupo que contiene el identificador(id)
      * del grupo por el que se buscara los roles
      * @param borradoo booleano con el cual identifica si esta como no borrado
-     * @return lista de la clase Rol
+     * @return un objeto de la clase WR_rol que poseera la lista de los roles
+     * que cumplan con los requerimientos y el resultado de la operación
      */
     @WebMethod(operationName = "listarRolesPorGrupo")
-    public Collection<rol> listarRolesPorGrupo(@WebParam(name = "grupousuarios") grupo idGrupo, @WebParam(name = "borrado") boolean borradoo) {
-        Collection<rol> lista = ugrFacade.listarRolesPorGrupos(idGrupo, borradoo);
-        return lista;
+    public WR_rol listarRolesPorGrupo(@WebParam(name = "grupousuarios") grupo idGrupo, @WebParam(name = "borrado") boolean borradoo) {
+        WR_rol Resultado = new WR_rol();
+        Resultado = myValidador.validarListarRolesPorGrupo(idGrupo);
+        if (Resultado.getEstatus().compareTo("OK") != 0) {
+            return Resultado;
+        }
+        try {
+            List<rol> Roles = ugrFacade.listarRolesPorGrupos(idGrupo, borradoo);
+            for (int i = 0; i < Roles.size(); i++) {
+                Resultado.ingresarRol(Roles.get(i));
+            }
+            //Resultado.setRols( (ArrayList<rol>) ugrFacade.listarRolesPorGrupos(idGrupo, borradoo));
+            Resultado.setEstatus("OK");
+        } catch (Exception e) {
+            Resultado.setEstatus("Fail");
+            Resultado.setObservacion(e.getMessage());
+            System.out.print("*******************************************************************************");
+            e.printStackTrace();
+        }
+        return Resultado;
     }
 
     /**
@@ -117,10 +139,29 @@ public class GestionDeGrupo {
      * del grupo por el que se buscara los usuarios
      * @param idRol objeto de la clase Rol que contiene el identificador(id) del
      * rol por el que se buscara los usuarios
-     * @return lista de la clase usuario_grupo_rol con los usuarios
+     * @return un objeto de la clase WR_usuario_grupo_rol que poseera la lista
+     * de usuarioGrupoRol que cumplan con los requerimientos y el resultado de
+     * la operación
      */
     @WebMethod(operationName = "listarUsuariosPorGrupoYRol")
-    public Collection<usuario_grupo_rol> listarUsuariosPorGrupoYRol(@WebParam(name = "grupousuarios") grupo idGrupo, @WebParam(name = "roles") rol idRol) {
-        return ugrFacade.listarUsuariosporGrupoyRol(idGrupo, idRol);
+    public WR_usuario_grupo_rol listarUsuariosPorGrupoYRol(@WebParam(name = "grupousuarios") grupo idGrupo, @WebParam(name = "roles") rol idRol) {
+        WR_usuario_grupo_rol Resultado = new WR_usuario_grupo_rol();
+        Resultado = myValidador.ValidarListarUsuariosPorGrupoYRol(idGrupo, idRol);
+        if (Resultado.getEstatus().compareTo("OK") != 0) {
+            return Resultado;
+        }
+        try {
+            List<usuario_grupo_rol> Lista = ugrFacade.listarUsuariosporGrupoyRol(idGrupo, idRol);
+            for (int i = 0; i < Lista.size(); i++) {
+                Resultado.ingresarUsuarioGrupoRol(Lista.get(i));
+            }
+            Resultado.setEstatus("OK");
+        } catch (Exception e) {
+            Resultado.setEstatus("Fail");
+            Resultado.setObservacion(e.getMessage());
+            System.out.print("*******************************************************************************");
+            e.printStackTrace();
+        }
+        return Resultado;
     }
 }

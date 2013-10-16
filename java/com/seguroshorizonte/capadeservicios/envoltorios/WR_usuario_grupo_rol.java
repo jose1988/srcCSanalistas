@@ -105,4 +105,8 @@ public class WR_usuario_grupo_rol {
     public void setUsuario_Grupo_Rols(ArrayList<usuario_grupo_rol> usuario_Grupo_Rols) {
         this.usuario_Grupo_Rols = usuario_Grupo_Rols;
     }
+
+    public void ingresarUsuarioGrupoRol(usuario_grupo_rol Nuevo) {
+        usuario_Grupo_Rols.add(Nuevo);
+    }
 }

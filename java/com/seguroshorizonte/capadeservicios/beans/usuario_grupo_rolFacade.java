@@ -81,8 +81,8 @@ public class usuario_grupo_rolFacade extends AbstractFacade<usuario_grupo_rol> {
      * @param borrado
      * @return
      */
-    public Collection<rol> listarRolesPorGrupos(grupo idGrupo, boolean borrado) {
-        return em.createNamedQuery("usuario_grupo_rol.findByRol").setParameter("idGrupo", idGrupo).setParameter("borrado", borrado).getResultList();
+    public List<rol> listarRolesPorGrupos(grupo idGrupo, boolean borrado) {
+        return  em.createNamedQuery("usuario_grupo_rol.findByRol").setParameter("idGrupo", idGrupo).setParameter("borrado", borrado).getResultList();
     }
 
     /**
@@ -91,8 +91,8 @@ public class usuario_grupo_rolFacade extends AbstractFacade<usuario_grupo_rol> {
      * @param idRol
      * @return
      */
-    public Collection<usuario_grupo_rol> listarUsuariosporGrupoyRol(grupo idGrupo, rol idRol) {
-        return em.createNamedQuery("usuario_grupo_rol.findByRolGrupo").setParameter("idGrupo", idGrupo).setParameter("idRol", idRol).getResultList();
+    public List<usuario_grupo_rol> listarUsuariosporGrupoyRol(grupo idGrupo, rol idRol) {
+        return  em.createNamedQuery("usuario_grupo_rol.findByRolGrupo").setParameter("idGrupo", idGrupo).setParameter("idRol", idRol).getResultList();
     }
 
 }

@@ -104,4 +104,8 @@ public class WR_rol {
     public void setRols(ArrayList<rol> rols) {
         this.rols = rols;
     }
+
+    public void ingresarRol(rol nuevoRol) {
+        rols.add(nuevoRol);
+    }
 }
