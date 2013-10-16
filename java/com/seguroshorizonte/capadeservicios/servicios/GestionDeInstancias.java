@@ -806,7 +806,6 @@ public class GestionDeInstancias {
             Resultado.setEstatus("OK");
             Resultado.setObservacion(Resultado.getTareas().size() + " tareas encontradas");
 
-
         } catch (Exception e) {
             Resultado.setEstatus("Fail");
             Resultado.setObservacion(e.getMessage());
@@ -824,6 +823,16 @@ public class GestionDeInstancias {
     public List<String> buscarEstados() {
 
         return myInstanciaFacade.buscarestados();
+
+    }
+    
+     /**
+     * Método que obtiene el id de la tarea inicial del proceso
+     */
+    @WebMethod(operationName = "idTareaInicial")
+    public long idTareaInicial() {
+      
+        return myTareaFacade.TareaInicial();
 
     }
 

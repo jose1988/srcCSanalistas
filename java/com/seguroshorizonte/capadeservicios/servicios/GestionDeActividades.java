@@ -10,6 +10,7 @@ import com.seguroshorizonte.capadeservicios.beans.cola_de_tareaFacade;
 import com.seguroshorizonte.capadeservicios.beans.documentoFacade;
 import com.seguroshorizonte.capadeservicios.beans.instanciaFacade;
 import com.seguroshorizonte.capadeservicios.beans.sesionFacade;
+import com.seguroshorizonte.capadeservicios.beans.tareaFacade;
 import com.seguroshorizonte.capadeservicios.beans.transicionFacade;
 import com.seguroshorizonte.capadeservicios.beans.usuarioFacade;
 import com.seguroshorizonte.capadeservicios.clienteweb.Actividad;
@@ -100,9 +101,12 @@ public class GestionDeActividades {
     @EJB
     cola_de_tareaFacade myColaDeTareaFacade = new cola_de_tareaFacade();
     @EJB
+    tareaFacade tareaFacade = new tareaFacade();
+    @EJB
     transicionFacade myTransicionFacade = new transicionFacade();
     private actividad activi;
     private WR_actividad actividad;
+    private long idTarea;
     /**
      * Agrega un enlace a un documento externo y lo asocia a una actividad
      * determinada. el documento sera registrado de manera de que se puedan
@@ -680,6 +684,12 @@ public class GestionDeActividades {
             /**
              * AQUI VAS!!
              */
+            idTarea=idTareaInicial();
+            if(idTarea==0){
+               Resultado.setEstatus("Fail");
+            Resultado.setObservacion("El proceso no posee tarea inicial"); 
+            }
+            
         } catch (Exception e) {
             Resultado.setEstatus("Fail");
             Resultado.setObservacion(e.getMessage());
@@ -1439,6 +1449,16 @@ public class GestionDeActividades {
     public List<actividad> listarActividades(@WebParam(name = "estado") String estado, @WebParam(name = "borrado") boolean borradoo) {
         
         return actividadFacade.listarActividades(estado, borradoo);
+       
+    }
+    
+    /** 
+     * Método que devuele el id de la tarea inicial del proceso
+     */
+    @WebMethod(operationName = "idTareaInicial")
+    public long idTareaInicial() {
+        
+        return tareaFacade.TareaInicial();
        
     }
 
