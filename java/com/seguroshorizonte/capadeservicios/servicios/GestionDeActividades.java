@@ -1302,7 +1302,7 @@ public class GestionDeActividades {
             actividadActual.setIdUsuario(usuarioActual);
             myActividadFacade.edit(actividadActual);
             myColaDeTareaFacade.remove(myColaDeTareaFacade.find(colaDeTareaActual));
-            Resultado.setEstatus("Ok");
+            Resultado.setEstatus("OK");
 
 
         } catch (Exception e) {
