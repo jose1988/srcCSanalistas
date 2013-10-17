@@ -30,8 +30,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "cola_de_tarea.findAll", query = "SELECT c FROM cola_de_tarea c"),
     @NamedQuery(name = "cola_de_tarea.findById", query = "SELECT c FROM cola_de_tarea c WHERE c.id = :id"),
+    @NamedQuery(name = "cola_de_tarea.findByMinimoId", query = "SELECT MIN(c.id) FROM cola_de_tarea c WHERE c.borrado=false and c.idActividad.borrado = false AND c.idGrupo.borrado = false AND c.idTarea.borrado = false "),
     @NamedQuery(name = "cola_de_tarea.findByBorrado", query = "SELECT c FROM cola_de_tarea c WHERE c.borrado = :borrado")})
 public class cola_de_tarea implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -128,5 +130,4 @@ public class cola_de_tarea implements Serializable {
     public String toString() {
         return "com.seguroshorizonte.capadeservicios.entidades.cola_de_tarea[ id=" + id + " ]";
     }
-    
 }

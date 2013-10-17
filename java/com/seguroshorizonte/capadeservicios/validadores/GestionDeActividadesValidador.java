@@ -5,6 +5,7 @@
 package com.seguroshorizonte.capadeservicios.validadores;
 
 import com.seguroshorizonte.capadeservicios.entidades.actividad;
+import com.seguroshorizonte.capadeservicios.entidades.cola_de_tarea;
 import com.seguroshorizonte.capadeservicios.entidades.condicion;
 import com.seguroshorizonte.capadeservicios.entidades.documento;
 import com.seguroshorizonte.capadeservicios.entidades.sesion;
@@ -335,6 +336,22 @@ public class GestionDeActividadesValidador {
             Resultado.setEstatus("FAIL");
             Resultado.setObservacion("Los identificadores de la actividad y el usuario introducidos son invalidos");            
             }else{
+                Resultado.setEstatus("OK");
+            }
+        }
+        return Resultado;
+    }
+    
+    public WR_actividad validarPrimeroEnEntrarPrimeroEnSalirDeCola(cola_de_tarea Cola) {
+        WR_actividad Resultado = new WR_actividad();
+        if (Cola.getId() == null) {
+            Resultado.setEstatus("FAIL");
+            Resultado.setObservacion("El identificador de Cola de Tarea introducido es invalido");
+        } else {
+            if (Cola.getId() < 0) {
+                Resultado.setEstatus("FAIL");
+                Resultado.setObservacion("El identificador de Cola de Tarea introducido es invalido");
+            } else {
                 Resultado.setEstatus("OK");
             }
         }

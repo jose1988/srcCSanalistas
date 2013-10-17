@@ -38,7 +38,7 @@ public class tareaFacade extends AbstractFacade<tarea> {
        int ban=0,i=0;
        List<tarea> tareas=this.findAll();
        while(ban==0){
-          if(tareas.get(i).getBorrado()){
+          if(tareas.get(i).getTareaInicial()){
               idtarea=tareas.get(i).getId();
               ban=1;
           }
